@@ -6,8 +6,28 @@ This is part of submission for university subject with the shortest acronime pos
 ## Hardware 
 * ESP8266 (ESP32 can also be used)
 * Any relay switch capable of controlling a regular home power outlet, that is controllable via a digital ~2.7V input
-* * 2.2V - 3.6V power supply for ESP8266
+* 2.2V - 3.6V power supply for ESP8266
 
 ## Setup and Usage
 ### Software
 Same as in https://github.com/Mabolci/curtain_smarthome#software
+
+Additional outlets can be connected to controller. To do so, connect more relays to chosen GPIO ports. Then define them in code as follows:
+
+```cpp
+#define OUTLET_PIN_1 14
+```
+
+then, inside **callback** method add
+```cpp
+digitalWrite(OUTLET_PIN_1, HIGH);
+```
+and
+```cpp
+digitalWrite(OUTLET_PIN_1, LOW);
+```
+
+In lines commented with *add additional outlets here* accordingly.
+
+### Hardware
+Connect 
