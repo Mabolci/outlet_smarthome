@@ -19,10 +19,13 @@ Additional outlets can be connected to controller. To do so, connect more relays
 ```
 
 then, inside **callback** method add
+
 ```cpp
 digitalWrite(OUTLET_PIN_1, HIGH);
 ```
+
 and
+
 ```cpp
 digitalWrite(OUTLET_PIN_1, LOW);
 ```
@@ -30,4 +33,7 @@ digitalWrite(OUTLET_PIN_1, LOW);
 In lines commented with *add additional outlets here* accordingly.
 
 ### Hardware
-Connect 
+Connect all outlet relays with chosen GPIO ports.
+
+### Debugging
+Same as in https://github.com/Mabolci/curtain_smarthome#debugging. Addionally, NodeMcu boards' builtin LED will light up when outlets are on, and switch off when off.
